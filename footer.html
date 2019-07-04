@@ -1,0 +1,400 @@
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/abs/popper.js/1.14.7/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	 @media(min-width: 768px){
+	  .desk-no{
+	   display: none !important;
+	  }
+
+	 }
+	   .footer-dmart{
+	   position: fixed;
+	   left: 0;
+	   bottom: 2% !important;
+	   width: 100%;
+	   background-color: #e1e1e1;
+	   color: #000 !important;
+	   text-align: center;
+	   padding: 2% 0 !important;
+	   z-index: 999 !important;
+	   margin: -4% 0 !important;
+	 }
+	 .footer-img{
+	  width: 50% !important;
+	 }
+	 .footer-contents{
+	  margin-right: auto !important;
+	  margin-left: auto !important;
+	  margin-top: -7% !important;
+	 }
+	 .lzd-act-richtext a{
+	  color: #000 !important;
+	  text-decoration: none !important;
+	  font-weight: 600 !important;
+	  font-size: 12px; 
+	 }
+	 .footer-wrap{
+	  display: none !important;
+	 }.lzd-act-richtext img{
+	  position: relative !important;
+	  top: 0% !important;
+	  border-radius: 100% !important;
+	  border: 2px solid #e1e1e1 !important;
+	  margin-bottom: 3px !important;
+
+	 }
+	 .footer-list-main{
+	 	padding-left: 30px !important;
+	 	list-style: none !important;
+	 	margin-left: -15% !important;
+	 	line-height: 1.5 !important;
+	 	cursor: pointer !important;
+	 	font-size: 10px !important;
+	 	font-family: 'Montserrat', sans-serif !important;
+	 }
+	 .main-listing{
+	 	
+	 }
+	 .main-listing-img{
+	 	border-radius: 50px !important;
+	 	margin-right: 7.5px !important;
+	 	box-shadow: rgba(0, 0, 0, 0.11) 0px 0.96px 4.8px 0px !important; 
+	 	float: left !important;
+	 	width: 40px !important;
+	 }
+	 .list-group{
+	 	width: 45%;
+	 	float: left;
+	 }
+	 .sub-cat-contents{
+	 	width: 15% !important;
+	 	border-radius: 100% !important;
+		background: #e1e1e1;
+		border: 1px solid #e1e1e1;
+		box-shadow: rgba(0, 0, 0, 0.11) 0px 0.96px 4.8px 0px; 
+	 }
+	 #firstcat{
+	 	font-family: 'Montserrat', sans-serif !important;
+	 }
+	 .list-group-item-action:active{
+	 	background: #f9f9f9;
+	 }
+	 .list-group-item-action{
+	 	font-weight: 500;
+	 }
+	 .list-group-item{
+	 	padding: 2.75rem 1.25rem 2.75rem .5rem !important;
+	 }
+	 .col-xs-6{
+	 	width: 55% !important;
+	 	padding-left: 10px !important;
+	 }
+	 .col-xs-5{
+	 	width: 49.667% !important;
+	 }
+	 .col-xs-2{
+	 	padding-right: 0 !important;
+	 }
+	 #category{
+	 	transition-duration: 2s;
+    	transition-delay: 2s;
+    	transition-timing-function: linear;
+    	-webkit-transition-duration: 2s;
+    	-webkit-transition-delay: 2s;
+    	-webkit-transition-timing-function:
+	 }
+	 .col-xs-3{
+	 	width: 33% !important;
+	 }
+	</style>
+	<div id="category" class="row" style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0%;height: 100% !important;">
+	<div class="col-xs-12">
+		<i class="fa fa-times" style="font-size: 20px; cursor: pointer; display: none;" onclick="closeCat()"></i>
+	</div>
+	<div class="col-xs-2 pull-left list-group">
+		<ul class="footer-list-main" style="padding-left: 27px !important;">
+			<li id="firstlist" onclick="firstCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1ynOHaMFY.1VjSZFnXXcFHXXa.jpg" style="width: 24px;margin-top: -2px;"><span>Great Grocey Sale</span></li>
+			<li id="secondlist" onclick="secondCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1ikr3J3HqK1RjSZFEXXcGMXXa-1600-1600.jpg" style="width: 24px;margin-top: -12px;"><span>RedMart Label</span></li>
+			<li id="thirdlist" onclick="thirdCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB18UKDH7zoK1RjSZFlXXai4VXa-1600-1600.jpg" style="width: 24px;margin-top: -10px;"><span>Fruits & Vegs</span></li>
+			<li id="fourthlist" onclick="fourthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1zjFzLNjaK1RjSZKzXXXVwXXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Meats & Seafood</span></li>
+			<li id="fifthlist" onclick="fifthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1Csn.H9zqK1RjSZFpXXakSXXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Rice & Cooking Essentials</span></li>
+			<li id="sixthlist" onclick="sixthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1TngtH3DqK1RjSZSyXXaxEVXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Dairy, Chilled & Eggs</span></li>
+			<li id="seventhlist" onclick="seventhCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB106sJHZfpK1RjSZFOXXa6nFXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Beverages</span></li>
+			<li id="eighthlist" onclick="eighthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB169V.KmrqK1RjSZK9XXXyypXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Mother & Baby</span></li>
+		</ul>
+	</div>
+	<div id="firstcat" class="col-xs-6 pull-right" style="display: show;background-color:#f9f9f9;">
+	<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1qbxYelGE3KVjSZFhXXckaFXa.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Best Bargains For Home Cooks</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1FViTelGE3KVjSZFhXXckaFXa.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Post Holiday Essentials Stock Up</span>
+		</div>
+	</div>
+	</div>
+	<div id="secondcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://img.alicdn.com/tfs/TB11XhkLFYqK1RjSZLeXXbXppXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Mother & Baby</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1yOOSI8LoK1RjSZFuXXXn0XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Bakery & Breakfast</span>
+		</div>
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://img.alicdn.com/tfs/TB1N9JxLNYaK1RjSZFnXXa80pXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Dairy, Chilled & Eggs</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://img.alicdn.com/tfs/TB1Z.JjLQvoK1RjSZPfXXXPKFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice & Cooking Essentials</span>
+		</div>
+	</div>
+	</div>
+	<div id="thirdcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1od0cIFzqK1RjSZSgXXcpAVXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Asian Vegetables</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB15rs7IAvoK1RjSZFwXXciCFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Lettuce & Salads</span>
+		</div>
+	</div>
+	</div>
+	<div id="fourthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1.JdfIIbpK1RjSZFyXXX_qFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Fresh Meat</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://gw.alicdn.com/tfs/TB1zjFzLNjaK1RjSZKzXXXVwXXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Fresh Seafood</span>
+		</div>
+	</div>
+	</div>
+	<div id="fifthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1tdHSJ7voK1RjSZPfXXXPKFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Fresh Milk</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1sAbWJYrpK1RjSZTEXXcWAVXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px; display: block !important;cursor: pointer;">Eggs</span>
+		</div>
+	</div>
+	</div>
+	<div id="sixthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1FKOFH3HqK1RjSZFkXXX.WFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1zE29c_Zmx1VjSZFGXXax2XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Noodles & Vermicelli</span>
+		</div>
+	</div>
+	</div>
+	<div id="seventhcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1FKOFH3HqK1RjSZFkXXX.WFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1zE29c_Zmx1VjSZFGXXax2XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Noodles & Vermicelli</span>
+		</div>
+	</div>
+	</div>
+	<div id="eighthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
+			<div class="row" style="margin-top: 10px;">
+		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1FKOFH3HqK1RjSZFkXXX.WFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice</span>
+		</div>
+		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
+			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1zE29c_Zmx1VjSZFGXXax2XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Noodles & Vermicelli</span>
+		</div>
+	</div>
+	</div>
+</div>
+	<footer class="desk-no">
+		<div class="footer-dmart">
+			<div class="row" style="margin-top: -5px !important; margin-bottom: 8px !important;">
+				<div class="col-xs-3 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
+					<a href=""><img class="footer-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1Y5vxJZfpK1RjSZFOXXa6nFXa-120-120.png">Homepage</a>
+				</div>
+<!-- 				<div class="col-xs-3 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
+					<a href=""><img class="footer-img" src="https://gw.alicdn.com/tfs/TB19C3NeL1G3KVjSZFkXXaK4XXa-120-120.png">Best Sellers</a>
+				</div> -->
+				<div class="col-xs-3 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
+					<a href=""><img class="footer-img" src="https://gw.alicdn.com/tfs/TB13FUMeLWG3KVjSZFgXXbTspXa-120-120.png">Oneday Delivery</a>
+				</div>
+				<div class="col-xs-3 footer-contents" onclick="category()" style="font-family: 'Montserrat', sans-serif !important;">
+					<img class="footer-img" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1G8mNUAzoK1RjSZFlXXai4VXa.png" style="cursor:pointer;"><span style="cursor:pointer; font-weight: 600;font-size: 12px;">Categories</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script type="text/javascript">
+    function category() {
+		document.getElementById('category').style.display="block";
+		document.getElementById('firstlist').style.backgroundColor="#f9f9f9";
+
+	}
+		function closeCat(){
+		document.getElementById('category').style.display="none";
+	}
+	function firstCatOpen(){
+		document.getElementById('firstcat').style.display="block";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";
+		document.getElementById('sixthcat').style.display="none";
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="none";
+		document.getElementById('firstlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function secondCatOpen(){
+		document.getElementById('secondcat').style.display="block";
+		document.getElementById('firstcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";
+		document.getElementById('sixthcat').style.display="none";
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="none";
+		document.getElementById('secondlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function thirdCatOpen(){
+		document.getElementById('thirdcat').style.display="block";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('firstcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";
+		document.getElementById('sixthcat').style.display="none";
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="none";
+		document.getElementById('thirdlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function fourthCatOpen(){
+		document.getElementById('fourthcat').style.display="block";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('firstcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";	
+		document.getElementById('sixthcat').style.display="none";	
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="none";
+		document.getElementById('fourthlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function fifthCatOpen(){
+		document.getElementById('fifthcat').style.display="block";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('firstcat').style.display="none";	
+		document.getElementById('sixthcat').style.display="none";
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="none";	
+		document.getElementById('fifthlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function sixthCatOpen(){
+		document.getElementById('sixthcat').style.display="block";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";	
+		document.getElementById('firstcat').style.display="none";
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="none";	
+		document.getElementById('sixthlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function seventhCatOpen(){
+		document.getElementById('sixthcat').style.display="none";
+		document.getElementById('seventhcat').style.display="block";
+		document.getElementById('eighthcat').style.display="none";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";	
+		document.getElementById('firstcat').style.display="none";	
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#f9f9f9";
+		document.getElementById('eighthlist').style.backgroundColor="#fff";
+	}
+	function eighthCatOpen(){
+		document.getElementById('sixthcat').style.display="none";
+		document.getElementById('seventhcat').style.display="none";
+		document.getElementById('eighthcat').style.display="block";
+		document.getElementById('secondcat').style.display="none";
+		document.getElementById('thirdcat').style.display="none";
+		document.getElementById('fourthcat').style.display="none";
+		document.getElementById('fifthcat').style.display="none";	
+		document.getElementById('firstcat').style.display="none";	
+		document.getElementById('sixthlist').style.backgroundColor="#fff";
+		document.getElementById('firstlist').style.backgroundColor="#fff";
+		document.getElementById('secondlist').style.backgroundColor="#fff";
+		document.getElementById('thirdlist').style.backgroundColor="#fff";
+		document.getElementById('fourthlist').style.backgroundColor="#fff";
+		document.getElementById('fifthlist').style.backgroundColor="#fff";
+		document.getElementById('seventhlist').style.backgroundColor="#fff";
+		document.getElementById('eighthlist').style.backgroundColor="#f9f9f9";
+	}
+
+
+</script>
