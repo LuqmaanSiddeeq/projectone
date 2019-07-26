@@ -1,400 +1,653 @@
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/abs/popper.js/1.14.7/umd/popper.min.js">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style type="text/css">
-	 @media(min-width: 768px){
-	  .desk-no{
-	   display: none !important;
-	  }
+<!-- stylesheets -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	 }
-	   .footer-dmart{
-	   position: fixed;
-	   left: 0;
-	   bottom: 2% !important;
-	   width: 100%;
-	   background-color: #e1e1e1;
-	   color: #000 !important;
-	   text-align: center;
-	   padding: 2% 0 !important;
-	   z-index: 999 !important;
-	   margin: -4% 0 !important;
-	 }
-	 .footer-img{
-	  width: 50% !important;
-	 }
-	 .footer-contents{
-	  margin-right: auto !important;
-	  margin-left: auto !important;
-	  margin-top: -7% !important;
-	 }
-	 .lzd-act-richtext a{
-	  color: #000 !important;
-	  text-decoration: none !important;
-	  font-weight: 600 !important;
-	  font-size: 12px; 
-	 }
-	 .footer-wrap{
-	  display: none !important;
-	 }.lzd-act-richtext img{
-	  position: relative !important;
-	  top: 0% !important;
-	  border-radius: 100% !important;
-	  border: 2px solid #e1e1e1 !important;
-	  margin-bottom: 3px !important;
+<style type="text/css">
+    .div-img {
+        width: 50% !important;
+    }
 
-	 }
-	 .footer-list-main{
-	 	padding-left: 30px !important;
-	 	list-style: none !important;
-	 	margin-left: -15% !important;
-	 	line-height: 1.5 !important;
-	 	cursor: pointer !important;
-	 	font-size: 10px !important;
-	 	font-family: 'Montserrat', sans-serif !important;
-	 }
-	 .main-listing{
-	 	
-	 }
-	 .main-listing-img{
-	 	border-radius: 50px !important;
-	 	margin-right: 7.5px !important;
-	 	box-shadow: rgba(0, 0, 0, 0.11) 0px 0.96px 4.8px 0px !important; 
-	 	float: left !important;
-	 	width: 40px !important;
-	 }
-	 .list-group{
-	 	width: 45%;
-	 	float: left;
-	 }
-	 .sub-cat-contents{
-	 	width: 15% !important;
-	 	border-radius: 100% !important;
-		background: #e1e1e1;
-		border: 1px solid #e1e1e1;
-		box-shadow: rgba(0, 0, 0, 0.11) 0px 0.96px 4.8px 0px; 
-	 }
-	 #firstcat{
-	 	font-family: 'Montserrat', sans-serif !important;
-	 }
-	 .list-group-item-action:active{
-	 	background: #f9f9f9;
-	 }
-	 .list-group-item-action{
-	 	font-weight: 500;
-	 }
-	 .list-group-item{
-	 	padding: 2.75rem 1.25rem 2.75rem .5rem !important;
-	 }
-	 .col-xs-6{
-	 	width: 55% !important;
-	 	padding-left: 10px !important;
-	 }
-	 .col-xs-5{
-	 	width: 49.667% !important;
-	 }
-	 .col-xs-2{
-	 	padding-right: 0 !important;
-	 }
-	 #category{
-	 	transition-duration: 2s;
-    	transition-delay: 2s;
-    	transition-timing-function: linear;
-    	-webkit-transition-duration: 2s;
-    	-webkit-transition-delay: 2s;
-    	-webkit-transition-timing-function:
-	 }
-	 .col-xs-3{
-	 	width: 33% !important;
-	 }
-	</style>
-	<div id="category" class="row" style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0%;height: 100% !important;">
-	<div class="col-xs-12">
-		<i class="fa fa-times" style="font-size: 20px; cursor: pointer; display: none;" onclick="closeCat()"></i>
-	</div>
-	<div class="col-xs-2 pull-left list-group">
-		<ul class="footer-list-main" style="padding-left: 27px !important;">
-			<li id="firstlist" onclick="firstCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1ynOHaMFY.1VjSZFnXXcFHXXa.jpg" style="width: 24px;margin-top: -2px;"><span>Great Grocey Sale</span></li>
-			<li id="secondlist" onclick="secondCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1ikr3J3HqK1RjSZFEXXcGMXXa-1600-1600.jpg" style="width: 24px;margin-top: -12px;"><span>RedMart Label</span></li>
-			<li id="thirdlist" onclick="thirdCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB18UKDH7zoK1RjSZFlXXai4VXa-1600-1600.jpg" style="width: 24px;margin-top: -10px;"><span>Fruits & Vegs</span></li>
-			<li id="fourthlist" onclick="fourthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1zjFzLNjaK1RjSZKzXXXVwXXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Meats & Seafood</span></li>
-			<li id="fifthlist" onclick="fifthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1Csn.H9zqK1RjSZFpXXakSXXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Rice & Cooking Essentials</span></li>
-			<li id="sixthlist" onclick="sixthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1TngtH3DqK1RjSZSyXXaxEVXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Dairy, Chilled & Eggs</span></li>
-			<li id="seventhlist" onclick="seventhCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB106sJHZfpK1RjSZFOXXa6nFXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Beverages</span></li>
-			<li id="eighthlist" onclick="eighthCatOpen()" class="main-listing list-group-item list-group-item-action"><img class="main-listing-img" src="https://laz-img-cdn.alicdn.com/tfs/TB169V.KmrqK1RjSZK9XXXyypXa-1600-1600.jpg" style="width: 24px;margin-top: -4px;"><span>Mother & Baby</span></li>
-		</ul>
-	</div>
-	<div id="firstcat" class="col-xs-6 pull-right" style="display: show;background-color:#f9f9f9;">
-	<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1qbxYelGE3KVjSZFhXXckaFXa.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Best Bargains For Home Cooks</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1FViTelGE3KVjSZFhXXckaFXa.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Post Holiday Essentials Stock Up</span>
-		</div>
-	</div>
-	</div>
-	<div id="secondcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://img.alicdn.com/tfs/TB11XhkLFYqK1RjSZLeXXbXppXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Mother & Baby</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1yOOSI8LoK1RjSZFuXXXn0XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Bakery & Breakfast</span>
-		</div>
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://img.alicdn.com/tfs/TB1N9JxLNYaK1RjSZFnXXa80pXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Dairy, Chilled & Eggs</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://img.alicdn.com/tfs/TB1Z.JjLQvoK1RjSZPfXXXPKFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice & Cooking Essentials</span>
-		</div>
-	</div>
-	</div>
-	<div id="thirdcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1od0cIFzqK1RjSZSgXXcpAVXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Asian Vegetables</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB15rs7IAvoK1RjSZFwXXciCFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Lettuce & Salads</span>
-		</div>
-	</div>
-	</div>
-	<div id="fourthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1.JdfIIbpK1RjSZFyXXX_qFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Fresh Meat</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://gw.alicdn.com/tfs/TB1zjFzLNjaK1RjSZKzXXXVwXXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 10px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Fresh Seafood</span>
-		</div>
-	</div>
-	</div>
-	<div id="fifthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1tdHSJ7voK1RjSZPfXXXPKFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Fresh Milk</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1sAbWJYrpK1RjSZTEXXcWAVXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px; display: block !important;cursor: pointer;">Eggs</span>
-		</div>
-	</div>
-	</div>
-	<div id="sixthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1FKOFH3HqK1RjSZFkXXX.WFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1zE29c_Zmx1VjSZFGXXax2XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Noodles & Vermicelli</span>
-		</div>
-	</div>
-	</div>
-	<div id="seventhcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1FKOFH3HqK1RjSZFkXXX.WFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1zE29c_Zmx1VjSZFGXXax2XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Noodles & Vermicelli</span>
-		</div>
-	</div>
-	</div>
-	<div id="eighthcat" class="col-xs-6 pull-right" style="display: none;background-color:#f9f9f9;">
-			<div class="row" style="margin-top: 10px;">
-		<div class="col-xs-5 pull-left" style="margin: 10px -10px 0 -25px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1FKOFH3HqK1RjSZFkXXX.WFXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Rice</span>
-		</div>
-		<div class="col-xs-5 pull-right" style="margin: 10px -5px;">
-			<img class="sub-cat-contents" src="https://laz-img-cdn.alicdn.com/tfs/TB1zE29c_Zmx1VjSZFGXXax2XXa-1600-1600.jpg" style="width: 80% !important;"><br><span style="font-size: 12px;font-family: 'Montserrat', sans-serif !important;text-align: center;font-weight:500;margin-left: 5px;display: block !important;cursor: pointer;">Noodles & Vermicelli</span>
-		</div>
-	</div>
-	</div>
+    .div-contents {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        margin-top: -7% !important;
+    }
+
+    .lzd-act-richtext a {
+        color: #000 !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-size: 11px;
+    }
+
+    .div-wrap {
+        display: none !important;
+    }
+
+    .lzd-act-richtext img {
+        position: relative !important;
+        top: 0% !important;
+        border-radius: 100% !important;
+        border: 2px solid #e1e1e1 !important;
+        margin-bottom: 3px !important;
+    }
+
+    .div-list-main {
+        padding-left: 18px !important;
+        padding-right: 0 !important;
+        list-style: none !important;
+        margin-left: -15% !important;
+        line-height: 1.5 !important;
+        cursor: pointer !important;
+        font-size: 10px !important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .main-listing-img {
+        border-radius: 50px !important;
+        margin-right: 7.5px !important;
+        box-shadow: rgba(0, 0, 0, 0.11) 0px 0.96px 4.8px 0px !important;
+        float: left !important;
+        width: 40px !important;
+    }
+
+    .list-group-item-action:active {
+        background: #f9f9f9;
+    }
+
+    .list-group-item-action {
+        font-weight: 500;
+    }
+
+    .list-group-item {
+        padding: 2.75rem 1.25rem 2.75rem .5rem !important;
+    }
+
+    #category1 {
+        transition-duration: 2s;
+        transition-delay: 2s;
+        transition-timing-function: linear;
+        -webkit-transition-duration: 2s;
+        -webkit-transition-delay: 2s;
+        -webkit-transition-timing-function:
+    }
+
+    .full-width {
+        width: 100% !important;
+    }
+
+    .cat-hr {
+        border: 0.5px solid #d8d8d8;
+        margin-top: -1rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    .dmart-main-div {
+        position: absolute !important;
+    }
+
+    .lzd-act-richtext ol,
+    .lzd-act-richtext ul {
+        padding-left: 18px !important;
+        padding-right: 0 !important;
+    }
+
+    .hr-margin {
+        margin-bottom: 2rem;
+    }
+
+    .lzd-act-richtext h6 {
+        margin: 0 !important;
+        font-weight: 500 !important;
+    }
+
+    @media (min-width: 375px) and (max-width: 1200px) {
+        .div-dmart {
+            position: fixed !important;
+            left: 0;
+            bottom: -7% !important;
+            width: 100%;
+            background-color: #e1e1e1 !important;
+            color: #000;
+            text-align: center;
+            padding: 2% 0 !important;
+            z-index: 999 !important;
+            margin: -4% 0 !important;
+            height: 135px !important;
+        }
+    }
+
+    .div-dmart {
+        position: fixed !important;
+        left: 0;
+        bottom: -10.5%;
+        width: 100%;
+        background-color: #e1e1e1;
+        color: #000 !important;
+        text-align: center;
+        padding: 2% 0 !important;
+        z-index: 999 !important;
+        margin: -4% 0 !important;
+        height: 135px !important;
+    }
+
+    @media(min-width: 768px) {
+        .desk-no {
+            display: none !important;
+        }
+        #category1, #category2 {
+            display: none !important;
+        }
+    }
+</style>
+<div id="category1" style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0;left:0;height: 100% !important;overflow-y: scroll !important; width: 100% !important;font-family: 'Montserrat', sans-serif !important;">
+
+
+    <div class="col-xs-5 list-group" style="height: 100%; overflow: scroll;">
+        <ul class="div-list-main">
+            <li class="main-listing list-group-item list-group-item-action" id="firstlist" onclick="firstCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB19yd3XXY7gK0jSZKzXXaikpXa-100-100.png" style="width: 24px;margin-top: -8%;"><span>Shirts</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="secondlist" onclick="secondCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1a4p7XbY1gK0jSZTEXXXDQVXa-100-100.png" style="width: 24px;margin-top: -12px;"><span>T-shirts</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="thirdlist" onclick="thirdCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Pants</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="fourthlist" onclick="fourthCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Underwears</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="fifthlist" onclick="fifthCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Footwear</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="sixthlist" onclick="sixthCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Accessories & Eyewears</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="seventhlist" onclick="seventhCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Watches</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="eightlist" onclick="eightCatOpen()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Bags</span></li>
+
+        </ul>
+    </div>
+
+    <div class="col-xs-7" id="firstcat" style="display: show;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Shirts </span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/beverages?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/milk?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1XPd9Xfb2gK0jSZK9XXaEgFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center"> formal Shirts </h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/tea?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">casual Shirts </h6>
+        </div>
+
+
+    </div>
+
+    <div class="col-xs-7 fixed" id="secondcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">T-shirts</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast-cereal?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1zNh_XhD1gK0jSZFsXXbldVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Under 999 </h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/jams-honey-and-spreads?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1Ind_XbH1gK0jSZFwXXc7aXXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Under 1999 </h6>
+        </div>
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast-cereal?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1zNh_XhD1gK0jSZFsXXbldVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Under 2999 </h6>
+        </div>
+    </div>
+
+    <div class="col-xs-7 fixed" id="thirdcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Pants</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Denims </h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Trousers </h6>
+        </div>
+
+    </div>
+    <div class="col-xs-7 fixed" id="fourthcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Underwears</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Trunks & Boxers </h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Briefs </h6>
+        </div>
+
+    </div>
+    <div class="col-xs-7 fixed" id="fifthcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Footwear</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Casual Wear </h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Formal Wear </h6>
+        </div>
+
+    </div>
+        <div class="col-xs-7 fixed" id="sixthcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Accessories & Eyewears</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Fashion Accessories</h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Eyewears</h6>
+        </div>
+
+    </div>
+        <div class="col-xs-7 fixed" id="seventhcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Watches</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Watches Under 999</h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Accessories Under 2999 </h6>
+        </div>
+                <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">premium watches </h6>
+        </div>
+
+    </div>
+            <div class="col-xs-7 fixed" id="eightcat" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Bags</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Backpacks </h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Messenger Bags </h6>
+        </div>
+                <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Wallets </h6>
+        </div>
+
+    </div>
+
 </div>
-	<footer class="desk-no">
-		<div class="footer-dmart">
-			<div class="row" style="margin-top: -5px !important; margin-bottom: 8px !important;">
-				<div class="col-xs-3 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
-					<a href=""><img class="footer-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1Y5vxJZfpK1RjSZFOXXa6nFXa-120-120.png">Homepage</a>
-				</div>
-<!-- 				<div class="col-xs-3 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
-					<a href=""><img class="footer-img" src="https://gw.alicdn.com/tfs/TB19C3NeL1G3KVjSZFkXXaK4XXa-120-120.png">Best Sellers</a>
-				</div> -->
-				<div class="col-xs-3 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
-					<a href=""><img class="footer-img" src="https://gw.alicdn.com/tfs/TB13FUMeLWG3KVjSZFgXXbTspXa-120-120.png">Oneday Delivery</a>
-				</div>
-				<div class="col-xs-3 footer-contents" onclick="category()" style="font-family: 'Montserrat', sans-serif !important;">
-					<img class="footer-img" src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1G8mNUAzoK1RjSZFlXXai4VXa.png" style="cursor:pointer;"><span style="cursor:pointer; font-weight: 600;font-size: 12px;">Categories</span>
-				</div>
-			</div>
-		</div>
-	</footer>
+
+<div id="category2" style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0;left:0;height: 100% !important;overflow-y: scroll !important; width: 100% !important;font-family: 'Montserrat', sans-serif !important;">
+
+
+    <div class="col-xs-5 list-group" style="height: 100%; overflow: scroll;">
+        <ul class="div-list-main">
+            <li class="main-listing list-group-item list-group-item-action" id="firstlist" onclick="firstCatOpen2()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB19yd3XXY7gK0jSZKzXXaikpXa-100-100.png" style="width: 24px;margin-top: -8%;"><span>Dresses</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="secondlist" onclick="secondCatOpen2()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1a4p7XbY1gK0jSZTEXXXDQVXa-100-100.png" style="width: 24px;margin-top: -12px;"><span>Traditional Clothing</span></li>
+            <li class="main-listing list-group-item list-group-item-action" id="thirdlist" onclick="thirdCatOpen2()"><img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png" style="width: 24px;margin-top: -10px;"><span>Tops</span></li>
+        </ul>
+    </div>
+
+    <div class="col-xs-7" id="firstcat2" style="display: show;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Dresses</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/beverages?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/milk?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1XPd9Xfb2gK0jSZK9XXaEgFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Party Dresses</h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/tea?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Casual Dresses</h6>
+        </div>
+
+    </div>
+
+    <div class="col-xs-7 fixed" id="secondcat2" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Traditional Clothing</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast-cereal?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1zNh_XhD1gK0jSZFsXXbldVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Sarees</h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/jams-honey-and-spreads?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1Ind_XbH1gK0jSZFwXXc7aXXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Kurutis</h6>
+        </div>
+    </div>
+
+    <div class="col-xs-7 fixed" id="thirdcat2" style="display: none;padding-left: 0px;">
+
+        <div class="">
+            <br>
+            <span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Tops</span>
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+                            <span class="pull-right" style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See More</span>
+                        </a>
+        </div>
+
+        <div class="col-xs-12">
+            <hr class="hr-margin">
+        </div>
+
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"></a><br>
+            <h6 class="text-center">Rice</h6>
+        </div>
+        <div class="col-xs-6">
+            <a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+                        <img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block" style="object-fit: contain; width: 100%;"><br></a>
+            <h6 class="text-center">Condiment Dressing</h6>
+        </div>
+
+    </div>
+</div>
+
+<div class="desk-no">
+    <div class="dmart-main-div">
+        <div class="div-dmart div-dmart-sm">
+            <div style="margin-top: -5px !important; margin-bottom: 8px !important;">
+                <div class="col-xs-4 div-contents" style="font-family: 'Montserrat', sans-serif !important;">
+                    <a href="https://www.daraz.lk/wow/i/lk/campaigns/fashion-home?hybrid=1" style="cursor:pointer !important; font-weight: 600 !important;font-size: 9.6px !important;text-decoration: none !important;color: black;">
+                            <img class="div-img" src="http://laz-img-cdn.alicdn.com/images/ims-web/TB12HCibBr0gK0jSZFnXXbRRXXa.png" style="margin-bottom: 8px;">
+                            <span>Homepage</span>
+                        </a>
+                </div>
+                <div class="col-xs-4 div-contents" onclick="category2()" style="font-family: 'Montserrat', sans-serif !important;">
+                    <img class="div-img" src="http://laz-img-cdn.alicdn.com/images/ims-web/TB1VYKibBr0gK0jSZFnXXbRRXXa.png" style="margin-bottom: 8px;">
+                            <span>Women's</span>
+                </div>
+                <div class="col-xs-4 div-contents" onclick="category1()" style="font-family: 'Montserrat', sans-serif !important;">
+                    <img class="div-img" src="http://laz-img-cdn.alicdn.com/images/ims-web/TB1o6Oibrj1gK0jSZFuXXcrHpXa.png" style="cursor:pointer; margin-bottom: 8px;">
+                    <span style="cursor:pointer; font-weight: 600;font-size: 9.6px;">Men's</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    function category() {
-		document.getElementById('category').style.display="block";
-		document.getElementById('firstlist').style.backgroundColor="#f9f9f9";
+    function category1() {
+        var x = document.getElementById("category1");
+        var z = document.getElementById("category2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            z.style.display = "none";   
+        } else {
+            x.style.display = "none";
+        }
+    }
 
-	}
-		function closeCat(){
-		document.getElementById('category').style.display="none";
-	}
-	function firstCatOpen(){
-		document.getElementById('firstcat').style.display="block";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";
-		document.getElementById('sixthcat').style.display="none";
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="none";
-		document.getElementById('firstlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function secondCatOpen(){
-		document.getElementById('secondcat').style.display="block";
-		document.getElementById('firstcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";
-		document.getElementById('sixthcat').style.display="none";
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="none";
-		document.getElementById('secondlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function thirdCatOpen(){
-		document.getElementById('thirdcat').style.display="block";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('firstcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";
-		document.getElementById('sixthcat').style.display="none";
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="none";
-		document.getElementById('thirdlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function fourthCatOpen(){
-		document.getElementById('fourthcat').style.display="block";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('firstcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";	
-		document.getElementById('sixthcat').style.display="none";	
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="none";
-		document.getElementById('fourthlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function fifthCatOpen(){
-		document.getElementById('fifthcat').style.display="block";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('firstcat').style.display="none";	
-		document.getElementById('sixthcat').style.display="none";
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="none";	
-		document.getElementById('fifthlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function sixthCatOpen(){
-		document.getElementById('sixthcat').style.display="block";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";	
-		document.getElementById('firstcat').style.display="none";
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="none";	
-		document.getElementById('sixthlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function seventhCatOpen(){
-		document.getElementById('sixthcat').style.display="none";
-		document.getElementById('seventhcat').style.display="block";
-		document.getElementById('eighthcat').style.display="none";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";	
-		document.getElementById('firstcat').style.display="none";	
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#f9f9f9";
-		document.getElementById('eighthlist').style.backgroundColor="#fff";
-	}
-	function eighthCatOpen(){
-		document.getElementById('sixthcat').style.display="none";
-		document.getElementById('seventhcat').style.display="none";
-		document.getElementById('eighthcat').style.display="block";
-		document.getElementById('secondcat').style.display="none";
-		document.getElementById('thirdcat').style.display="none";
-		document.getElementById('fourthcat').style.display="none";
-		document.getElementById('fifthcat').style.display="none";	
-		document.getElementById('firstcat').style.display="none";	
-		document.getElementById('sixthlist').style.backgroundColor="#fff";
-		document.getElementById('firstlist').style.backgroundColor="#fff";
-		document.getElementById('secondlist').style.backgroundColor="#fff";
-		document.getElementById('thirdlist').style.backgroundColor="#fff";
-		document.getElementById('fourthlist').style.backgroundColor="#fff";
-		document.getElementById('fifthlist').style.backgroundColor="#fff";
-		document.getElementById('seventhlist').style.backgroundColor="#fff";
-		document.getElementById('eighthlist').style.backgroundColor="#f9f9f9";
-	}
 
+    function firstCatOpen() {
+        document.getElementById('firstcat').style.display = "block";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "none";
+    }
+
+        function secondCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "block";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "none";
+    }
+
+        function thirdCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "block";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "none";
+    }
+        function fourthCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "block";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "none";
+    }
+        function fifthCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "block";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "none";
+    }
+        function sixthCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "block";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "none";
+    }
+        function seventhCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "block";
+        document.getElementById('eightcat').style.display = "none";
+    }
+        function eightCatOpen() {
+        document.getElementById('firstcat').style.display = "none";
+        document.getElementById('secondcat').style.display = "none";
+        document.getElementById('thirdcat').style.display = "none";
+        document.getElementById('fourthcat').style.display = "none";
+        document.getElementById('fifthcat').style.display = "none";
+        document.getElementById('sixthcat').style.display = "none";
+        document.getElementById('seventhcat').style.display = "none";
+        document.getElementById('eightcat').style.display = "block";
+    }
+
+</script>
+
+<script type="text/javascript">
+    function category2() {
+        var z = document.getElementById("category2");
+        var x = document.getElementById("category1");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+            x.style.display = "none";
+        } else {
+            z.style.display = "none";
+        }
+    }
+
+    function firstCatOpen2() {
+        document.getElementById('firstcat2').style.display = "block";
+        document.getElementById('secondcat2').style.display = "none";
+        document.getElementById('thirdcat2').style.display = "none";
+
+    }
+
+    function secondCatOpen2() {
+        document.getElementById('secondcat2').style.display = "block";
+        document.getElementById('firstcat2').style.display = "none";
+        document.getElementById('thirdcat2').style.display = "none";
+    }
+
+    function thirdCatOpen2() {
+        document.getElementById('thirdcat2').style.display = "block";
+        document.getElementById('secondcat2').style.display = "none";
+        document.getElementById('firstcat2').style.display = "none";
+    }
 
 </script>
