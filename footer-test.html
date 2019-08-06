@@ -1,4 +1,6 @@
 <!-- stylesheets -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://kit.fontawesome.com/0ff19582bb.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -154,6 +156,13 @@
         bottom: 25%;
         
     }
+    #draggable { 
+  cursor:move;
+  height: 150px;
+  padding: 1em;
+  width: 300px;
+  text-align:center;
+}
     @media(min-width: 768px) {
         .desk-no {
             display: none !important;
@@ -163,7 +172,7 @@
         }
     }
 </style>
-<div class="desk-no col-xs-3" id="drag" style="position: absolute;cursor: move;padding: 0 !important;z-index: 9;">
+<div class="desk-no col-xs-3 drag" id="drag" style="position: absolute;cursor: move;padding: 0 !important;z-index: 9;">
     <a id="Img" href="https://www.daraz.lk"><img src="https://gw.alicdn.com/tfs/TB13FSWcxn1gK0jSZKPXXXvUXXa-2095-1481.png" style="width: 100%;border-radius: none !important;border: none !important;"></a>
 </div>
 <div id="category1" style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0;left:0;height: 100% !important;overflow-y: scroll !important; width: 100% !important;font-family: 'Montserrat', sans-serif !important;">
@@ -756,6 +765,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
     // Make the DIV element draggable:
 dragElement(document.getElementById("drag"));
 
