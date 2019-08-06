@@ -1,8 +1,9 @@
 <!-- stylesheets -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://kit.fontawesome.com/0ff19582bb.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover user-scalable=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -150,7 +151,18 @@
     .main-cat-img{
         width: 25%;
     }
-
+    #drag{
+        right: 0;
+        bottom: 25%;
+        
+    }
+    #draggable { 
+  cursor:move;
+  height: 150px;
+  padding: 1em;
+  width: 300px;
+  text-align:center;
+}
     @media(min-width: 768px) {
         .desk-no {
             display: none !important;
@@ -160,6 +172,9 @@
         }
     }
 </style>
+<div class="desk-no col-xs-3 drag" id="drag" style="position: absolute;cursor: move;padding: 0 !important;z-index: 9;">
+    <a id="Img" href="https://www.daraz.lk"><img src="https://gw.alicdn.com/tfs/TB13FSWcxn1gK0jSZKPXXXvUXXa-2095-1481.png" style="width: 100%;border-radius: none !important;border: none !important;"></a>
+</div>
 <div id="category1" style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0;left:0;height: 100% !important;overflow-y: scroll !important; width: 100% !important;font-family: 'Montserrat', sans-serif !important;">
     <div class="col-xs-5 list-group" style="height: 100%; overflow: scroll;">
         <ul class="div-list-main">
@@ -750,6 +765,50 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
+    // Make the DIV element draggable:
+dragElement(document.getElementById("drag"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "dragImg")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "dragImg").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
     function category1() {
         var x = document.getElementById("category1");
         var z = document.getElementById("category2");
