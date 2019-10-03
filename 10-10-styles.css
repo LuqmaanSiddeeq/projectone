@@ -1,3 +1,11 @@
+@media(min-width: 767px){.mui-zebra-page{
+    background: url(https://img.alicdn.com/tfs/TB1gVBJh7Y2gK0jSZFgSuw5OFXa.jpg#width=1920&height=1188);
+    background-repeat: none !important;
+}}
+@media(max-width: 768px){.mui-zebra-page{
+    background: url(https://img.alicdn.com/tfs/TB1sUtHh9f2gK0jSZFPSutsopXa.jpg#width=750&height=1156);
+    background-repeat: none !important;
+}
 .lzd-act-title .more{color: #fff !important;}
 
 .p-slider-product-list a {
