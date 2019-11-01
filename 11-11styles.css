@@ -1,6 +1,8 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
 <style>
-
+.daz-scrolling-xbanner .container{
+     background: #fff0 !important;
+}
 .p-slider-product-list a {
     text-decoration: none !important;
 }
