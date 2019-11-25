@@ -28,6 +28,9 @@
 .lzd-act-partnership-daraz .cs-slide{
  overflow-x: hidden !important;
 }
+.daz-scrolling-xbanner .container{
+    background: transparent !important;
+}
 @media(max-width: 767px){
     .p-slider-content{
         height: auto !important;
