@@ -380,4 +380,7 @@
 .daz-scrolling-xbanner .shop-link .placeHolderControl{
     height: 190px !important;
 }
+.lzd-act-elevator .elevator-item.active .anchor, .lzd-act-elevator .elevator-item:hover .anchor {
+    color: #fff;
+}
 </style>
