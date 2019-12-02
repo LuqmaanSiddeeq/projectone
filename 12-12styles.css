@@ -2,7 +2,7 @@
 <style>
 .mui-zebra-page{ 
     background-size: contain !important;
-    background-color: #bc1d20 !important;
+    background: rgba(194, 33, 39, 1) !important;
 }
 .p-slider-product-list a {
     text-decoration: none !important;
