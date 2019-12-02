@@ -283,6 +283,7 @@
     }
     .p-slider div, .p-slider li, .p-slider ul{
        margin-bottom: 1px;
+        z-index: 10;
     }
 }
 @media(max-width: 767px){
@@ -359,6 +360,7 @@
     }
     .p-slider-product{
         width: 42.66667vw !important;
+        z-index:10;
 }
     .p-slider-product-img{
         width: 42.66667vw !important;
