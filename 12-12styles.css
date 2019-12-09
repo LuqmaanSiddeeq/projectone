@@ -288,7 +288,7 @@
 }
 @media(max-width: 767px){
     .lzd-act-voucher-list-scroll-daraz .flex-grid-scroll{
-    height: 225px !important;
+    height: 250px !important;
 }
     .lzd-act-product-slot-endless-scroll{
         background: #fff !important;
