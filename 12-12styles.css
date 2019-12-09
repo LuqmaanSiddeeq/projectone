@@ -15,6 +15,7 @@
     color: #c22127 !important;
     text-shadow: 0px 0px 2px #d69c00;
     font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
 }
 
 .p-slider-product-img img {
