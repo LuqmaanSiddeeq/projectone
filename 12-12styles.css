@@ -52,6 +52,15 @@
 .lzd-act-partnership-daraz .cs-slide{
  overflow-x: auto !important;
 }
+.lzd-act-campaign-nav .nav .item{
+    font-weight: 800 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    }
+.item:hover{
+    color: #000 !important;
+    font-weight: 800 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    }
 }
 .lzd-act-title .title{
         font-family: 'Montserrat', sans-serif !important;
