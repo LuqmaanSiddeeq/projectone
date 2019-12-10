@@ -51,7 +51,12 @@
 #J_9338434820 .lzd-act-elevator .elevator-item.active, #J_9338434820 .lzd-act-elevator .elevator-item:hover, #J_9338434820 .lzd-act-elevator .elevator-item.active .anchor, #J_9338434820 .lzd-act-elevator .anchor{
     font-family: 'Montserrat', sans-serif !important;
 }
-
+#J_9338434820 .lzd-act-elevator .back-top{
+    font-family: 'Montserrat', sans-serif !important;
+}
+.elevator-box > div:nth-child(1) > h4:nth-child(2){
+    font-family: 'Montserrat', sans-serif !important;
+}
 @media(max-width: 767px) {
     .p-slider-content {
         height: auto !important;
