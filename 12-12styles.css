@@ -49,7 +49,7 @@
 }
 
 #J_9338434820 .lzd-act-elevator .elevator-item.active, #J_9338434820 .lzd-act-elevator .elevator-item:hover, #J_9338434820 .lzd-act-elevator .elevator-item.active .anchor, #J_9338434820 .lzd-act-elevator .anchor{
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;.
 }
 #J_9338434820 .lzd-act-elevator .back-top{
     font-family: 'Montserrat', sans-serif !important;
@@ -142,7 +142,6 @@
         .lzd-act-navigation-icon-text {
             margin-top: 3px !important;
             padding: 3px !important;
-            text-shadow: 2px 2px #48272a;
         }
 
         .lzd-act-icon-navigation-list {
