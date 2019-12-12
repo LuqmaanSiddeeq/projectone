@@ -130,6 +130,10 @@
             font-size: 26px !important;
             font-weight: 700;
         }
+        .lzd-act-voucher-list-scroll-daraz .trending-carousel-li{
+            border-top-right-radius: 7px !important;
+            border-top-left-radius: 7px !important;
+    }
     }
 
     @media (max-width:767px) {
