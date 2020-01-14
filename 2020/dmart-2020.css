@@ -403,5 +403,13 @@ img, input{
 .daz-product-slot-endless-with-button .li-pagination{
     height: 7px;
 }
+.daz-product-slot-endless-with-button .card-product-slot-title{
+    font-size: 13px;
+    line-height: 15px;
+    height: 32px;
+}
+.daz-product-slot-endless-with-button .card-product-slot-title{
+    margin-top: 0;
+}
 }
 </style>
