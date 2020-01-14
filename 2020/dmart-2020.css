@@ -400,5 +400,8 @@ img, input{
     font-size: 12px;
     font-weight: 600;
 }
+.daz-product-slot-endless-with-button .li-pagination{
+    height: 7px;
+}
 }
 </style>
