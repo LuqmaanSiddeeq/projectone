@@ -1,5 +1,4 @@
 <style>
-
 .p-slider-product-list a {
     text-decoration: none !important;
 }
@@ -341,6 +340,14 @@ img, input{
      text-align: center !important;
      left: 2.5px !important;
     }
+    .responsive-box.daraz .flex-grid-col1, .responsive-box.daraz .flex-grid-col2, .responsive-box.daraz .flex-grid-col3, .responsive-box.daraz .flex-grid-col4{
+        padding: 0 !important;
+    }
+    /* New Endless With ATC BTN */
+    .block{
+        font-weight: 700;
+        margin-top: 0px !important;
+    }
 }
     @media(max-width: 768px){
     .p-slider-product-list a{
@@ -376,6 +383,7 @@ img, input{
         text-align: center !important;
         font-size: 14px !important;
 }
+/* New Endless with ATC BTN */
 .block{
     font-weight: 700;
     margin-top: 0px !important;
