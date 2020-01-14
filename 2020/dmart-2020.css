@@ -1,4 +1,5 @@
 <style>
+
 .p-slider-product-list a {
     text-decoration: none !important;
 }
@@ -387,6 +388,17 @@ img, input{
 .block{
     font-weight: 700;
     margin-top: 0px !important;
+}
+.daz-product-slot-endless-with-button .card-product-slot-banner, .daz-product-slot-endless-with-button .card-product-slot-link{
+    padding-top: 145%;
+}
+.daz-product-slot-endless-with-button .sale-price{
+    font-size: 15px;
+    font-weight: 600;
+}
+.daz-product-slot-endless-with-button .second-line-price .discount, .daz-product-slot-endless-with-button .second-line-price .original-price{
+    font-size: 12px;
+    font-weight: 600;
 }
 }
 </style>
