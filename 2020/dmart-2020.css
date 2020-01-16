@@ -3,10 +3,10 @@
     text-decoration: none !important;
 }
 .lzd-act-title .inner-content{
-    background-color: #350948 !important;
+    background-color: #62bc42 !important;
     border-radius: 7px; text-align:center;
-    color: #ffd500 !important;
-    text-shadow: 2px 2px #000000;
+    color: #fff !important;
+    text-shadow: 2px 2px #666363;
 }
 .p-slider-product-img img{
     object-fit: contain !important;
@@ -18,7 +18,7 @@
     background: transparent !important;
 }
 .lzd-act-title .more {
-    color: #ffd500 !important;
+    color: #fff !important;
 }
 .lzd-act-partnership-daraz .cs-slide{
  overflow-x: hidden !important;
@@ -29,14 +29,14 @@
     }
     .lzd-act-title .title {
     font-family: 'Montserrat';
-    text-shadow: 2px 2px #000000;
+    text-shadow: 2px 2px #666363;
     }
 .p-slider {
     background: transparent !important;
 }
 .lzd-act-title{
-    color: #ffd500 !important;
-    background-color: #350948 !important;
+    color: #fff !important;
+    background-color: #62bc42 !important;
 }
 .lzd-act-partnership-daraz .cs-slide{
  overflow-x: auto !important;
