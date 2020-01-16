@@ -44,7 +44,8 @@
 }
 .mui-zebra-page{ 
     background-size: contain !important;
-    background-color: #dcdddf !important;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(220,221,223,1) 50%);
 }
 .lzd-act-title .title{
         font-family: 'Montserrat', sans-serif !important;
