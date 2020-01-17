@@ -3,10 +3,9 @@
     text-decoration: none !important;
 }
 .lzd-act-title .inner-content{
-    background-color: #62bc42 !important;
+    background-color: #dcdddf57 !important;
     border-radius: 7px; text-align:center;
-    color: #fff !important;
-    text-shadow: 2px 2px #666363;
+    color: #6e6e6e !important;
 }
 .p-slider-product-img img{
     object-fit: contain !important;
@@ -18,7 +17,7 @@
     background: transparent !important;
 }
 .lzd-act-title .more {
-    color: #fff !important;
+    color: #6e6e6e !important;
 }
 .lzd-act-partnership-daraz .cs-slide{
  overflow-x: hidden !important;
@@ -35,8 +34,8 @@
     background: transparent !important;
 }
 .lzd-act-title{
-    color: #fff !important;
-    background-color: #62bc42 !important;
+    color: #6e6e6e !important;
+    background-color: #dcdddf57 !important;
 }
 .lzd-act-partnership-daraz .cs-slide{
  overflow-x: auto !important;
