@@ -200,6 +200,11 @@
         }   
 .p-slider-daraz .p-slider-content{border-radius: 7px !important;}
 @media(min-width: 768px){
+    /* New Endless with ATC BTN */
+.block{
+    font-weight: 700;
+    margin-top: 0px !important;
+}
   .p-slider-daraz .p-slider-slider-wrap{
       margin-top: -5px !important;
   }
@@ -380,11 +385,6 @@ img, input{
         margin-right: auto !important;
         text-align: center !important;
         font-size: 14px !important;
-}
-/* New Endless with ATC BTN */
-.block{
-    font-weight: 700;
-    margin-top: 0px !important;
 }
 .daz-product-slot-endless-with-button .card-product-slot-banner, .daz-product-slot-endless-with-button .card-product-slot-link{
     padding-top: 145%;
