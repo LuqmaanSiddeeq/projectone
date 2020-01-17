@@ -1,0 +1,574 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style type="text/css">
+	.footer-img {
+		width: 50% !important;
+	}
+
+	.footer-contents {
+		margin-right: auto !important;
+		margin-left: auto !important;
+		margin-top: -7% !important;
+	}
+
+	.lzd-act-richtext a {
+		color: #000 !important;
+		text-decoration: none !important;
+		font-weight: 600 !important;
+		font-size: 11px;
+	}
+
+	.footer-wrap {
+		display: none !important;
+	}
+
+	.lzd-act-richtext img {
+		position: relative !important;
+		top: 0% !important;
+		border-radius: 100% !important;
+		border: 2px solid #e1e1e1 !important;
+		margin-bottom: 3px !important;
+	}
+
+	.footer-list-main {
+		padding-left: 18px !important;
+		padding-right: 0 !important;
+		list-style: none !important;
+		margin-left: -15% !important;
+		line-height: 1.5 !important;
+		cursor: pointer !important;
+		font-size: 10px !important;
+		font-family: 'Montserrat', sans-serif !important;
+	}
+
+	.main-listing-img {
+		border-radius: 50px !important;
+		margin-right: 7.5px !important;
+		box-shadow: rgba(0, 0, 0, 0.11) 0px 0.96px 4.8px 0px !important;
+		float: left !important;
+		width: 40px !important;
+	}
+
+	.list-group-item-action:active {
+		background: #f9f9f9;
+	}
+
+	.list-group-item-action {
+		font-weight: 500;
+	}
+
+	.list-group-item {
+		padding: 2.75rem 1.25rem 2.75rem .5rem !important;
+	}
+
+	#category {
+		transition-duration: 2s;
+		transition-delay: 2s;
+		transition-timing-function: linear;
+		-webkit-transition-duration: 2s;
+		-webkit-transition-delay: 2s;
+		-webkit-transition-timing-function:
+	}
+
+	.full-width {
+		width: 100% !important;
+	}
+
+	.cat-hr {
+		border: 0.5px solid #d8d8d8;
+		margin-top: -1rem !important;
+		margin-bottom: 0rem !important;
+	}
+
+	.dmart-main-footer {
+		position: absolute !important;
+	}
+
+	.lzd-act-richtext ol,
+	.lzd-act-richtext ul {
+		padding-left: 18px !important;
+		padding-right: 0 !important;
+	}
+
+	.hr-margin {
+		margin-bottom: 2rem;
+	}
+
+	.lzd-act-richtext h6 {
+		margin: 0 !important;
+		font-weight: 500 !important;
+	}
+
+	@media (min-width: 375px) and (max-width: 1200px) {
+		.footer-dmart {
+			position: fixed !important;
+			left: 0;
+			bottom: -7% !important;
+			width: 100%;
+			background-color: #e1e1e1 !important;
+			color: #000;
+			text-align: center;
+			padding: 2% 0 !important;
+			z-index: 999 !important;
+			margin: -4% 0 !important;
+			height: 135px !important;
+		}
+	}
+
+
+	.footer-dmart {
+		position: fixed !important;
+		left: 0;
+		bottom: -10.5%;
+		width: 100%;
+		background-color: #e1e1e1;
+		color: #000 !important;
+		text-align: center;
+		padding: 2% 0 !important;
+		z-index: 999 !important;
+		margin: -4% 0 !important;
+		height: 135px !important;
+	}
+
+
+	@media(min-width: 768px) {
+		.desk-no {
+			display: none !important;
+		}
+
+		#category {
+			display: none !important;
+		}
+	}
+</style>
+<div id="category"
+	style="display: none; position: fixed !important; z-index: 999 !important;background: #f9f9f9 !important; top:0;left:0;height: 100% !important;overflow-y: scroll !important; width: 100% !important;font-family: 'Montserrat', sans-serif !important;">
+
+
+	<div class="col-xs-5 list-group" style="height: 100%; overflow: scroll;">
+		<ul class="footer-list-main">
+			<li class="main-listing list-group-item list-group-item-action" id="firstlist" onclick="firstCatOpen()"><img
+					class="main-listing-img" src="https://gw.alicdn.com/tfs/TB19yd3XXY7gK0jSZKzXXaikpXa-100-100.png"
+					style="width: 24px;margin-top: -8%;"><span>Grocery</span></li>
+			<li class="main-listing list-group-item list-group-item-action" id="secondlist" onclick="secondCatOpen()">
+				<img class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1a4p7XbY1gK0jSZTEXXXDQVXa-100-100.png"
+					style="width: 24px;margin-top: -12px;"><span>Health & Beauty</span></li>
+			<li class="main-listing list-group-item list-group-item-action" id="thirdlist" onclick="thirdCatOpen()"><img
+					class="main-listing-img" src="https://gw.alicdn.com/tfs/TB1BVR7Xi_1gK0jSZFqXXcpaXXa-100-100.png"
+					style="width: 24px;margin-top: -10px;"><span>Mother & Baby</span></li>
+		</ul>
+	</div>
+
+	<div class="col-xs-7" id="firstcat" style="display: show;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Grocery</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/beverages?hybrid=1">
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/milk?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1XPd9Xfb2gK0jSZK9XXaEgFXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Beverages</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/milk?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1XPd9Xfb2gK0jSZK9XXaEgFXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Breakfast</h6>
+		</div>
+
+		<div class="col-xs-12"> <br></div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/tea?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Chocolate & Snack</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/soft-drinks?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1aDp_Xbj1gK0jSZFuXXcrHpXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Baking & Cooking</h6>
+		</div>
+		<div class="col-xs-12"> <br></div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/juices?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1j7p9XeP2gK0jSZFoXXauIVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Laundry & Household</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/juices?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1j7p9XeP2gK0jSZFoXXauIVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Baby Needs</h6>
+		</div>
+	</div>
+
+	<div class="col-xs-7 fixed" id="secondcat" style="display: none;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Health & Beauty</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast?hybrid=1">
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast-cereal?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1zNh_XhD1gK0jSZFsXXbldVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Skin Care</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/jams-honey-and-spreads?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Ind_XbH1gK0jSZFwXXc7aXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Hair Care</h6>
+		</div>
+		<div class="col-xs-12"> <br></div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast-cereal?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1zNh_XhD1gK0jSZFsXXbldVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Bath & Body</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/jams-honey-and-spreads?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Ind_XbH1gK0jSZFwXXc7aXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Personal Care</h6>
+		</div>
+		<div class="col-xs-12"> <br></div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/breakfast-cereal?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1zNh_XhD1gK0jSZFsXXbldVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Fragrances</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/jams-honey-and-spreads?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Ind_XbH1gK0jSZFwXXc7aXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Men's Care</h6>
+		</div>
+	</div>
+
+	<div class="col-xs-7 fixed" id="thirdcat" style="display: none;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Mother & Baby</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/food-staples?hybrid=1">
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/rice?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1di0_XhD1gK0jSZFKXXcJrVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Diapers</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/condiment-dressing?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1EuB9XkT2gK0jSZFkXXcIQFXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Baby Personal Care</h6>
+		</div>
+
+		<div class="col-xs-12"> <br></div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/home-baking-and-sugar?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1SGt7XXT7gK0jSZFpXXaTkpXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Baby Health Care</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/grains-beans-and-pulses?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Gvd.XkL0gK0jSZFtXXXQCXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Pacifiers & Accessories</h6>
+		</div>
+		<div class="col-xs-12"> <br></div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/noodles-pasta?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1MS49XeL2gK0jSZFmXXc7iXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Baby Needs</h6>
+		</div>
+	</div>
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Laundry &
+				Household</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/laundry-and-household?hybrid=1">
+				<span class="pull-right"
+					style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See
+					More</span>
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/laundry-and-household-laundry?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1ghJ.XkL0gK0jSZFxXXXWHVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Laundry</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/laundry-and-household-cleaning?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Ohx.Xlv0gK0jSZKbXXbK2FXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Cleaning</h6>
+		</div>
+
+		<div class="col-xs-12"> <br></div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/laundry-and-household-dishwashing?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1skF_Xi_1gK0jSZFqXXcpaXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Dishwashing</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/laundry-and-household-pest-control?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB12u8_XoY1gK0jSZFMXXaWcVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Pest Control</h6>
+		</div>
+		<div class="col-xs-12"> <br></div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/laundry-and-household-air-care?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1BhJ.XkL0gK0jSZFxXXXWHVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br>
+			</a>
+			<h6 class="text-center">Air Care</h6>
+		</div>
+	</div>
+	<div class="col-xs-7 fixed" id="fifthcat" style="display: none;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Skin Care</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/skin-care?hybrid=1">
+				<span class="pull-right"
+					style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See
+					More</span>
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/moisturizers-and-cream?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1UAJ.XkL0gK0jSZFtXXXQCXXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Moisturizers and cream</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/facial-cleansers?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Pux.Xa61gK0jSZFlXXXDKFXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Facial Cleasers</h6>
+		</div>
+	</div>
+	<div class="col-xs-7 fixed" id="sixthcat" style="display: none;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Hair Care</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/hair-care?hybrid=1">
+				<span class="pull-right"
+					style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See
+					More</span>
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/hair-care-shampoo?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1bYt7Xa67gK0jSZFHXXa9jVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Shampoo</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/hair-care-conditioner?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1HY07XXY7gK0jSZKzXXaikpXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Conditioner</h6>
+		</div>
+	</div>
+	<div class="col-xs-7 fixed" id="seventhcat" style="display: none;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Makeup</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/makeup?hybrid=1">
+				<span class="pull-right"
+					style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See
+					More</span>
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/makeup-face?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1wu87XXT7gK0jSZFpXXaTkpXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Face</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/makeup-lip?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1BKB.Xbj1gK0jSZFuXXcrHpXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Lips</h6>
+		</div>
+	</div>
+	<div class="col-xs-7 fixed" id="eighthcat" style="display: none;padding-left: 0px;">
+
+		<div class="">
+			<br>
+			<span class="pull-left" style="font-size: 10px;cursor: pointer;font-weight:600 !important;">Baby Care</span>
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/baby-care?hybrid=1">
+				<span class="pull-right"
+					style="font-size: 10px;cursor: pointer;color: #3ec251 !important;font-weight:600;">&gt;&gt; See
+					More</span>
+			</a>
+		</div>
+
+		<div class="col-xs-12">
+			<hr class="hr-margin">
+		</div>
+
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/disposable-diapers?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB1Gkl_Xbj1gK0jSZFuXXcrHpXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"></a><br>
+			<h6 class="text-center">Disposable Diapers</h6>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://www.daraz.lk/wow/i/lk/dMart/baby-personal-care?hybrid=1">
+				<img src="https://gw.alicdn.com/tfs/TB12_d9Xoz1gK0jSZLeXXb9kVXa-100-100.png" class="center-block"
+					style="object-fit: contain; width: 100%;"><br></a>
+			<h6 class="text-center">Baby Personal Care</h6>
+		</div>
+	</div> -->
+
+</div>
+<footer class="desk-no">
+	<div class="dmart-main-footer">
+		<div class="footer-dmart footer-dmart-sm">
+			<div style="margin-top: -5px !important; margin-bottom: 8px !important;">
+				<div class="col-xs-4 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
+					<a href="https://www.daraz.lk/wow/i/lk/dMart/main?"
+						style="cursor:pointer !important; font-weight: 600 !important;font-size: 9.6px !important;text-decoration: none !important;color: black;">
+						<img class="footer-img" src="https://gw.alicdn.com/tfs/TB1QCMreYus3KVjSZKbXXXqkFXa-120-120.png"
+							style="margin-bottom: 8px;">
+						<span>Homepage</span>
+					</a>
+				</div>
+				<div class="col-xs-4 footer-contents" style="font-family: 'Montserrat', sans-serif !important;">
+					<a href="https://www.daraz.lk/wow/i/lk/campaigns/kandy-one-day-delivery?hybrid=1"
+						style="cursor:pointer !important; font-weight: 600 !important;font-size: 9.6px !important;text-decoration: none !important;color: black;">
+						<img class="footer-img" src="https://laz-img-cdn.alicdn.com/tfs/TB1BAezufb2gK0jSZK9wu1EgFXa.png#width=120&height=120"
+							style="margin-bottom: 8px;">
+						<span>Unilever Exclusives</span>
+					</a>
+				</div>
+				<div class="col-xs-4 footer-contents" onclick="category()"
+					style="font-family: 'Montserrat', sans-serif !important;">
+					<img class="footer-img"
+						src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1G8mNUAzoK1RjSZFlXXai4VXa.png"
+						style="cursor:pointer; margin-bottom: 8px;">
+					<span style="cursor:pointer; font-weight: 600;font-size: 9.6px;">Categories</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	function category() {
+		var x = document.getElementById("category");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+
+	function firstCatOpen() {
+		document.getElementById('firstcat').style.display = "block";
+		document.getElementById('secondcat').style.display = "none";
+		document.getElementById('thirdcat').style.display = "none";
+		document.getElementById('firstlist').style.backgroundColor = "#f9f9f9";
+		document.getElementById('secondlist').style.backgroundColor = "#fff";
+		document.getElementById('thirdlist').style.backgroundColor = "#fff";
+	}
+
+	function secondCatOpen() {
+		document.getElementById('secondcat').style.display = "block";
+		document.getElementById('firstcat').style.display = "none";
+		document.getElementById('thirdcat').style.display = "none";
+		document.getElementById('secondlist').style.backgroundColor = "#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor = "#fff";
+		document.getElementById('thirdlist').style.backgroundColor = "#fff";
+	}
+
+	function thirdCatOpen() {
+		document.getElementById('thirdcat').style.display = "block";
+		document.getElementById('secondcat').style.display = "none";
+		document.getElementById('firstcat').style.display = "none";
+		document.getElementById('thirdlist').style.backgroundColor = "#f9f9f9";
+		document.getElementById('firstlist').style.backgroundColor = "#fff";
+		document.getElementById('secondlist').style.backgroundColor = "#fff";
+	}
+</script>
