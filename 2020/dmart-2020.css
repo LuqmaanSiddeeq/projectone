@@ -277,10 +277,6 @@
     .p-slider div, .p-slider li, .p-slider ul{
        margin-bottom: 1px;
     }
-/*   Use only for Addto cart Endless Module   */
-/*     .thumb-bx.card-product-slot-image{
-        height: 0 !important;
-    } */
 }
 @media(max-width: 767px){
     .lzd-act-product-slot-endless-scroll{
