@@ -519,6 +519,9 @@
     .daz-act-newarrival .card-item {
         box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .1);
     }
+    .lzd-act-voucher-list-scroll-daraz .flex-grid-scroll{
+        height: 63.66667vw !important;
+    }
 }
 
 @media(min-width: 768px) {
