@@ -149,6 +149,9 @@
     .lzd-act-banner {
         margin-top: 15px !important;
     }
+    #J_1642060210 .lzd-act-icon, #J_1642060210 .lzd-act-navigation-icon-text{
+        color: #000 !important;
+    }
 }
 
 @media (min-width: 768px) {
