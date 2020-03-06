@@ -1,5 +1,50 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800"rel="stylesheet">
 <style>
+/* Countdown CSS Starts Here */
+@media(max-width: 767px){
+  .hwc-counter .number{
+    color: #000 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+  }
+  .hwc-counter .circle{
+    background: #fff !important;
+  }
+  .hwc-counter .sign::after{
+   color: #000 !important;
+  }
+  .hwc-counter #days::after, .hwc-counter #hours::after, .hwc-counter #minutes::after, .hwc-counter #seconds::after{
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+  /* .lzd-act-header-with-counter .mobile{
+      bottom: 3.5% !important;
+      } */
+}
+@media(min-width: 768px){
+     .hwc-counter .number{
+      color: #000 !important;
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 600 !important;
+  }
+    .hwc-counter .circle{
+      background: #fff !important;
+
+    }
+      .hwc-counter .sign::after{
+   color: #000 !important;
+  }
+    .hwc-counter #days::after, .hwc-counter #hours::after, .hwc-counter #minutes::after, .hwc-counter #seconds::after{
+      font-family: 'Montserrat', sans-serif !important;
+      color: #000 !important;
+      font-weight: 600 !important;
+    }
+    /* .hwc-counter{
+        bottom: 50px !important; 
+    } */
+}
+/* Countdown CSS Ends Here */
 .p-slider-product-list a {
     text-decoration: none !important;
 }
