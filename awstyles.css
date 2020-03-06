@@ -33,31 +33,6 @@
 }
 
 @media(max-width: 767px) {
-    .hwc-counter .number{
-    color: #fff !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 600 !important;
-    text-shadow: 2px 2px #c64d00;
-  }
-  .hwc-counter .circle{
-    background-color: rgb(255, 112, 20) !important;
-  }
-  .hwc-counter .sign::after{
-   color: #fff !important;
-  }
-  .hwc-counter #days::after, .hwc-counter #hours::after, .hwc-counter #minutes::after, .hwc-counter #seconds::after{
-    font-family: 'Montserrat', sans-serif !important;
-    color: #fff !important;
-    font-weight: 600 !important;
-    text-shadow: 2px 2px #c64d00;
-  }
-  .hwc-counter .colon::after, .hwc-counter .colon::before{
-    background: rgba(255, 255, 255, 0.6) !important;
-  }
-    /* .lzd-act-header-with-counter .mobile{
-      bottom: 3.5% !important;
-      } */
-    
     .p-slider-content {
         height: auto !important;
     }
@@ -133,30 +108,6 @@
     .lzd-act-title .inner-content {
         font-size: 26px !important;
     }
-    .hwc-counter .number{
-      color: #fff !important;
-      font-family: 'Montserrat', sans-serif !important;
-      font-weight: 600 !important;
-      text-shadow: 2px 2px #c64d00;
-  }
-    .hwc-counter .circle{
-      background: rgb(255, 112, 20) !important;
-
-    }
-      .hwc-counter .sign::after{
-   color: #fff !important;
-  }
-    .hwc-counter #days::after, .hwc-counter #hours::after, .hwc-counter #minutes::after, .hwc-counter #seconds::after{
-      font-family: 'Montserrat', sans-serif !important;
-      color: #fff !important;
-      font-weight: 600 !important;
-    }
-  .hwc-counter .colon::after, .hwc-counter .colon::before{
-    background: rgba(255, 255, 255, 0.6) !important;
-  }
-      /* .hwc-counter{
-        bottom: 50px !important; 
-    } */
 }
 
 @media (max-width:767px) {
