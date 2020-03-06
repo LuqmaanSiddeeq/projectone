@@ -20,12 +20,12 @@
     font-weight: 600 !important;
     text-shadow: 2px 2px #c64d00;
   }
-  /* .lzd-act-header-with-counter .mobile{
-      bottom: 3.5% !important;
-      } */
   .hwc-counter .colon::after, .hwc-counter .colon::before{
     background: rgba(255, 255, 255, 0.6) !important;
   }
+    /* .lzd-act-header-with-counter .mobile{
+      bottom: 3.5% !important;
+      } */
 }
 @media(min-width: 768px){
      .hwc-counter .number{
@@ -46,12 +46,12 @@
       color: #fff !important;
       font-weight: 600 !important;
     }
-    /* .hwc-counter{
-        bottom: 50px !important; 
-    } */
   .hwc-counter .colon::after, .hwc-counter .colon::before{
     background: rgba(255, 255, 255, 0.6) !important;
   }
+      /* .hwc-counter{
+        bottom: 50px !important; 
+    } */
 }
 /* Countdown CSS Ends Here */
 .p-slider-product-list a {
