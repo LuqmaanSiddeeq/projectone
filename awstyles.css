@@ -36,11 +36,11 @@
 
     }
       .hwc-counter .sign::after{
-   color: #000 !important;
+   color: #fff !important;
   }
     .hwc-counter #days::after, .hwc-counter #hours::after, .hwc-counter #minutes::after, .hwc-counter #seconds::after{
       font-family: 'Montserrat', sans-serif !important;
-      color: #000 !important;
+      color: #fff !important;
       font-weight: 600 !important;
     }
     /* .hwc-counter{
