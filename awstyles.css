@@ -3,20 +3,22 @@
 /* Countdown CSS Starts Here */
 @media(max-width: 767px){
   .hwc-counter .number{
-    color: #000 !important;
+    color: #fff !important;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 600 !important;
+    text-shadow: 2px 2px #c64d00;
   }
   .hwc-counter .circle{
-    background: #fff !important;
+    background: rgb(255, 112, 20) !important;
   }
   .hwc-counter .sign::after{
-   color: #000 !important;
+   color: #fff !important;
   }
   .hwc-counter #days::after, .hwc-counter #hours::after, .hwc-counter #minutes::after, .hwc-counter #seconds::after{
     font-family: 'Montserrat', sans-serif !important;
-    color: #000 !important;
+    color: #fff !important;
     font-weight: 600 !important;
+    text-shadow: 2px 2px #c64d00;
   }
   /* .lzd-act-header-with-counter .mobile{
       bottom: 3.5% !important;
@@ -24,12 +26,13 @@
 }
 @media(min-width: 768px){
      .hwc-counter .number{
-      color: #000 !important;
+      color: #fff !important;
       font-family: 'Montserrat', sans-serif !important;
       font-weight: 600 !important;
+      text-shadow: 2px 2px #c64d00;
   }
     .hwc-counter .circle{
-      background: #fff !important;
+      background: rgb(255, 112, 20) !important;
 
     }
       .hwc-counter .sign::after{
