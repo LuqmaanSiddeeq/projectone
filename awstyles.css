@@ -1,6 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800"rel="stylesheet">
 <style>
-/* Countdown CSS Starts Here */
 @media(max-width: 767px){
   .hwc-counter .number{
     color: #fff !important;
@@ -9,7 +8,7 @@
     text-shadow: 2px 2px #c64d00;
   }
   .hwc-counter .circle{
-    background: rgb(255, 112, 20) !important;
+    background-color: rgb(255, 112, 20) !important;
   }
   .hwc-counter .sign::after{
    color: #fff !important;
@@ -36,7 +35,6 @@
   }
     .hwc-counter .circle{
       background: rgb(255, 112, 20) !important;
-
     }
       .hwc-counter .sign::after{
    color: #fff !important;
@@ -53,7 +51,6 @@
         bottom: 50px !important; 
     } */
 }
-/* Countdown CSS Ends Here */
 .p-slider-product-list a {
     text-decoration: none !important;
 }
