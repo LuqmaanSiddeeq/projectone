@@ -108,6 +108,9 @@
     .lzd-act-title .inner-content {
         font-size: 26px !important;
     }
+    .daz-product-slot3-product-item .product-item-img{
+        object-fit: contain !important;
+    }
 }
 
 @media (max-width:767px) {
