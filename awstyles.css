@@ -36,9 +36,6 @@
     .p-slider-content {
         height: auto !important;
     }
-    .p-slider-daraz .p-slider-product-title{
-        width: 190px !important;
-    }
 
     .lzd-act-title .title {
         font-family: 'Montserrat';
@@ -113,6 +110,9 @@
     }
     .daz-product-slot3-product-item .product-item-img{
         object-fit: contain !important;
+    }
+        .p-slider-daraz .p-slider-product-title{
+        width: 190px !important;
     }
 }
 
