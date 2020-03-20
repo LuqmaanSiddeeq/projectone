@@ -557,15 +557,17 @@
     background-color: #ff7014 !important;
     border-radius: 7px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
     font-weight: 800;
     color: #fff !important;
     text-shadow: 2px 2px #c64d00;
-    text-decoration: uppercase;
+    text-transform: uppercase;
 }
 .title-bar-link{
+    font-family: 'Montserrat', sans-serif !important;
     color: #fff;
     background: transparent;
-    text-decoration: uppercase;
+    text-transform: uppercase;
 
 }
 .title-bar-link-arrow{
