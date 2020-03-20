@@ -589,6 +589,7 @@
         border: 1px solid black;
     }
     .title-bar{
+    margin-top: 12px;
     background-color: #ff7014 !important;
     border-radius: 7px;
     text-align: center;
