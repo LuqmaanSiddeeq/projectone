@@ -553,17 +553,19 @@
         border-right: 4px solid#070606;
     }
 }
-.title-bar-content{
+.title-bar{
     background-color: #ff7014 !important;
     border-radius: 7px;
     text-align: center;
     font-weight: 800;
     color: #fff !important;
     text-shadow: 2px 2px #c64d00;
+    text-decoration: uppercase;
 }
 .title-bar-link{
     color: #fff;
     background: transparent;
+    text-decoration: uppercase;
 
 }
 .title-bar-link-arrow{
