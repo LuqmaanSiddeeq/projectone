@@ -554,4 +554,33 @@
         border-right: 4px solid#070606;
     }
 }
+.title-bar-content{
+    background-color: #ff7014 !important;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 800;
+    color: #fff !important;
+    text-shadow: 2px 2px #c64d00;
+}
+.title-bar-link{
+    color: #fff;
+    background: transparent;
+
+}
+.title-bar-link-arrow{
+    width: 28px;
+    height: 28px;
+    background-color: black;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+@media(max-width: 767px){
+    .title-bar-link-arrow{
+        width: 18px;
+        height: 18px;
+        background-color: black;
+        border-radius: 50px;
+        border: 1px solid black;
+    }
+}
 </style>
